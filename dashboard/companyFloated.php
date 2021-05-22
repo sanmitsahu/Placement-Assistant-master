@@ -592,8 +592,8 @@ include('db.php');
 
                       else 
                       {
-                        //echo "No secondary resources(directory not found)";
-                        $a = htmlspecialchars(json_encode($files));
+                        echo "No secondary resources uploaded for this Company. ";
+                        //$a = htmlspecialchars(json_encode($files));
                       }
                       //print_r($files);
                       
@@ -747,9 +747,16 @@ include('db.php');
                       else{
                         if($arrsubmission[0]==1 && $arrsubmission[1]==1 && $arrsubmission[2]==1 && $arrsubmission[3]==1 && $arrsubmission[4]==1 && $arrsubmission[5]==1)
                         {
-                        echo "<div class='column'>
-                      <div onclick=\"myFunction('$companay_name','$emailcom','$address','$Ann_date','$reg_deadline','$plink','$a')\" class=\"card\">
-                        <h2 style='display: inline-block;'>$companay_name</h2>
+                        echo "<div class='column'>";
+                      if (is_dir($slink)) 
+                        	{
+                      echo "<div onclick=\"myFunction('$companay_name','$emailcom','$address','$Ann_date','$reg_deadline','$plink','$a')\" class=\"card\">";
+                      }
+                      else
+                      	{
+                      		echo "<div onclick=\"myFunction('$companay_name','$emailcom','$address','$Ann_date','$reg_deadline','$plink')\" class=\"card\">";
+                      }
+                        echo "<h2 style='display: inline-block;'>$companay_name</h2>
                         <p style='display: inline-block;'>$emailcom</p>
                         <div class='form-container sign-up-container' align='right' >
 

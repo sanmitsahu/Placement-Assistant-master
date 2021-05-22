@@ -9,7 +9,9 @@ vendor/
 vendor1/
 dashboard/assets/
 dashboard/assets1/
+dashboard/includes/
 go-to-admin/admin/assets/
+go-to-admin/admin/includes/
 img/assets/
 dashboard/mail_test.php
 PHPMailer-master/
